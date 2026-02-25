@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- SEO Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoCastle Token (CCT) - Web3 Launchpad & Privacy Computing</title>
+    <meta name="description" content="CCT is a utility token built on high-strength encryption logic. As its logo suggests, the core diamond symbolizes an impenetrable data fortress. CCT aims to provide underlying power for privacy computing, asset verification, and on-chain security audits.">
+    <meta name="keywords" content="CCT, CryptoCastle Token, Web3, Launchpad, Blockchain, Crypto, BSC, Privacy Computing, Asset Verification, Security Audit, DeFi, Futuristic, Dark Theme">
+    <link rel="canonical" href="https://cryptocastle.com/"> <!-- Replace with your actual URL -->
+
+    <!-- OpenGraph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="CryptoCastle Token (CCT) - Web3 Launchpad & Privacy Computing">
+    <meta property="og:description" content="CCT is a utility token built on high-strength encryption logic. Powering privacy computing, asset verification, and on-chain security audits.">
+    <meta property="og:image" content="https://cryptocastle.com/og-image.jpg"> <!-- Replace with your actual OG image URL -->
+    <meta property="og:url" content="https://cryptocastle.com/"> <!-- Replace with your actual URL -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CryptoCastle">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CryptoCastleHQ">
+    <meta name="twitter:creator" content="@CryptoCastleHQ">
+
+    <!-- Embedded CSS for Web3 Launchpad Futuristic Dark Theme -->
+    <style>
+        /* Global Variables and Font Imports */
+        :root {
+            --primary-bg: #0a0a0f;
+            --secondary-bg: #1a1a2e;
+            --accent-color: #00f0ff; /* Neon Cyan */
+            --text-color: #e0e0e0;
+            --highlight-color: #8aff8a; /* Neon Green */
+            --border-color: #2e2e4a;
+            --gradient-start: #0f1c2d;
+            --gradient-end: #1d2b3a;
+            --font-family-primary: 'Orbitron', sans-serif; /* Futuristic */
+            --font-family-secondary: 'Roboto', sans-serif; /* Modern, readable */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family-secondary);
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll from glowing effects */
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--highlight-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-family-primary);
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 6rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1; /* Ensure content is above background effects */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .justify-center { justify-content: center; }
+        .items-center { align-items: center; }
+        .gap-4 { gap: 1rem; }
+
+        /* Glowing Border Effect for Sections */
+        .glow-border {
+            position: relative;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            overflow: hidden;
+        }
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg at 50% 50%, transparent 0%, var(--accent-color) 20%, transparent 40%, transparent 60%, var(--highlight-color) 80%, transparent 100%);
+            animation: rotateGlow 8s linear infinite;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        .glow-border::after {
+            content: '';
+            position: absolute;
+            inset: 2px; /* Inner border to create a layered effect */
+            background: var(--secondary-bg);
+            border-radius: 6px;
+            z-index: 1;
+        }
+        .glow-border > * {
+            position: relative;
+            z-index: 2; /* Ensure content is above the inner background */
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-bg);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0, 240, 255, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-family: var(--font-family-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-family: var(--font-family-primary);
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 5px var(--accent-color);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: relative;
+            cursor: pointer;
+            padding: 0.5rem 0.8rem;
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .lang-switcher:hover {
+            background-color: #2e2e4a;
+        }
+        .lang-switcher span {
+            pointer-events: none; /* Prevent span from interfering with click on parent */
+        }
+        .lang-switcher .dropdown-icon {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+        }
+        .lang-switcher.open .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            margin-top: 0.5rem;
+            z-index: 1001;
+            min-width: 120px;
+        }
+        .lang-dropdown.active {
+            display: flex;
+        }
+        .lang-dropdown button {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            padding: 0.8rem 1rem;
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .lang-dropdown button:hover {
+            background-color: var(--border-color);
+            color: var(--accent-color);
+        }
+
+        /* Hamburger Menu for Mobile */
+        .hamburger {
+            display: none; /* Hidden by default, shown on mobile */
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 5px;
+            position: relative;
+            z-index: 1002;
+        }
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .hamburger.open .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            padding: 8rem 1rem;
+            background: linear-gradient(180deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.1), transparent 70%);
+            animation: pulseGlow 8s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.05); opacity: 0.15; }
+            100% { transform: scale(1); opacity: 0.1; }
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-family: var(--font-family-primary);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent-color) 0%, var(--highlight-color) 100%);
+            color: var(--primary-bg);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.8), 0 0 50px rgba(0, 240, 255, 0.3);
+            transform: translateY(-3px);
+            background: linear-gradient(90deg, var(--highlight-color) 0%, var(--accent-color) 100%);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), 0 0 50px rgba(0, 240, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Token Logo */
+        .token-logo {
+            width: 150px;
+            height: 150px;
+            margin: 2rem auto;
+            animation: pulse 2s infinite alternate;
+            filter: drop-shadow(0 0 15px var(--accent-color));
+            position: relative;
+            z-index: 1;
+        }
+        .token-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 10px var(--accent-color)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 20px var(--accent-color)); }
+        }
+
+        /* Sections General */
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 0 8px var(--accent-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        #about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+        #about .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .about-card {
+            background-color: var(--secondary-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(0, 240, 255, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+        }
+        .about-card:hover::before {
+            opacity: 1;
+        }
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--highlight-color);
+            position: relative;
+            z-index: 1;
+        }
+        .about-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+        .about-card .icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 5px var(--accent-color));
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* Tokenomics Section */
+        #tokenomics .tokenomics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .token-info-card {
+            background-color: var(--secondary-bg);
+            padding: 2.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .token-info-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(138, 255, 138, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        .token-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 255, 138, 0.2);
+        }
+        .token-info-card:hover::before {
+            opacity: 1;
+        }
+        .token-info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--highlight-color);
+            position: relative;
+            z-index: 1;
+        }
+        .token-info-card p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .token-info-card strong {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .token-info-card .contract-address {
+            word-break: break-all;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            background-color: #111122;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--highlight-color);
+            border: 1px dashed var(--border-color);
+            position: relative;
+            z-index: 1;
+        }
+        .copy-btn {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .copy-btn:hover {
+            background-color: var(--highlight-color);
+            transform: translateY(-2px);
+        }
+        .copy-btn:active {
+            transform: translateY(0);
+        }
+
+
+        /* Roadmap Section */
+        #roadmap .roadmap-timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        #roadmap .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        .roadmap-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0; /* Hidden by default for animation */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .roadmap-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+            transform: translateX(-100px); /* Start off-screen left */
+        }
+        .roadmap-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+            transform: translateX(100px); /* Start off-screen right */
+        }
+        .roadmap-item.animate {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .roadmap-item-content {
+            padding: 20px 30px;
+            background-color: var(--secondary-bg);
+            position: relative;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .roadmap-item-content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(138, 255, 138, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        .roadmap-item-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.2);
+        }
+        .roadmap-item-content:hover::before {
+            opacity: 1;
+        }
+        .roadmap-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 1;
+        }
+        .roadmap-item p {
+            font-size: 1rem;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+        .roadmap-item .date {
+            font-size: 0.9rem;
+            color: var(--highlight-color);
+            margin-bottom: 1rem;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .roadmap-item .roadmap-point {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: var(--accent-color);
+            border: 3px solid var(--primary-bg);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        .roadmap-item:nth-child(odd) .roadmap-point {
+            right: -17px;
+            top: 30px;
+        }
+        .roadmap-item:nth-child(even) .roadmap-point {
+            left: -17px;
+            top: 30px;
+        }
+        .roadmap-item:hover .roadmap-point {
+            transform: scale(1.2);
+        }
+
+
+        /* Social Links Section */
+        #social-links {
+            text-align: center;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .social-icon {
+            display: inline-flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--secondary-bg);
+            border: 2px solid var(--border-color);
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--accent-color);
+            transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        .social-icon:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            transform: translateY(-5px) scale(1.1);
+            border-color: var(--highlight-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.2);
+        }
+        /* Using unicode emojis as icons for simplicity without external CDN */
+        .social-icon.telegram::before { content: '✈️'; }
+        .social-icon.twitter::before { content: '🐦'; }
+        .social-icon.website::before { content: '🌐'; }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-bg);
+            color: var(--border-color);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: var(--highlight-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none; /* Hide nav links on smaller screens */
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -300px; /* Start off-screen */
+                width: 300px;
+                height: 100vh;
+                background-color: var(--secondary-bg);
+                padding-top: 5rem;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+                transition: right 0.3s ease-in-out;
+                z-index: 1001;
+            }
+            .nav-links.active {
+                right: 0; /* Slide in */
+                display: flex;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            .nav-links a {
+                display: block;
+                padding: 1rem;
+                font-size: 1.2rem;
+                border-bottom: 1px solid var(--border-color);
+            }
+            .nav-links a:hover {
+                background-color: var(--border-color);
+            }
+            .hamburger {
+                display: flex;
+            }
+            .navbar {
+                justify-content: space-between;
+            }
+            .lang-switcher {
+                margin-left: auto; /* Push it to the right */
+            }
+            .lang-dropdown {
+                right: initial; /* Reset right positioning */
+                left: 0; /* Align left with switcher */
+                min-width: unset;
+                width: 100%;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            #hero p {
+                font-size: 1.1rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .btn {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .roadmap-timeline::before {
+                left: 18px; /* Move timeline to left side */
+            }
+            .roadmap-item {
+                width: 100%;
+                padding-left: 60px; /* Space for point */
+                padding-right: 15px;
+                left: 0; /* Align all items to left */
+                text-align: left;
+                transform: translateX(-50px); /* Start slightly off-screen */
+            }
+            .roadmap-item:nth-child(odd),
+            .roadmap-item:nth-child(even) {
+                transform: translateX(-50px); /* Adjust initial position for all items */
+            }
+            .roadmap-item .roadmap-point {
+                left: 10px;
+                right: auto; /* Reset right positioning */
+                top: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #hero h1 {
+                font-size: 2rem;
+            }
+            #hero p {
+                font-size: 1rem;
+            }
+            .token-logo {
+                width: 100px;
+                height: 100px;
+            }
+            .glow-border {
+                padding: 1rem;
+            }
+            .token-info-card, .about-card {
+                padding: 1.5rem;
+            }
+            .token-info-card .contract-address {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .copy-btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.7rem;
+            }
+            .social-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">CCT</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" data-lang-key="nav.home">Home</a></li>
+                <li><a href="#about" data-lang-key="nav.about">About</a></li>
+                <li><a href="#tokenomics" data-lang-key="nav.tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap" data-lang-key="nav.roadmap">Roadmap</a></li>
+                <li><a href="#social-links" data-lang-key="nav.social">Social</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <div class="lang-switcher" id="langSwitcher" aria-haspopup="true" aria-expanded="false">
+                    <span id="currentLang">EN</span>
+                    <span class="dropdown-icon">▼</span>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button data-lang="en">English (EN)</button>
+                        <button data-lang="zh-tw">繁體中文 (ZH-TW)</button>
+                        <button data-lang="ja">日本語 (JA)</button>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="token-logo">
+                    <img src="logo.png" alt="CCT Token Logo">
+                </div>
+                <h1 data-lang-key="hero.title">Unleash the Power of Privacy with CryptoCastle Token (CCT)</h1>
+                <p data-lang-key="hero.subtitle">Your Gateway to Secure & Efficient Web3 Interactions on BSC.</p>
+                <div class="hero-buttons">
+                    <a href="#tokenomics" class="btn btn-primary" data-lang-key="hero.buy_now">Buy CCT Now</a>
+                    <a href="#" class="btn btn-secondary" data-lang-key="hero.whitepaper">Whitepaper</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="glow-border">
+            <div class="container">
+                <h2 data-lang-key="about.title">About CryptoCastle Token</h2>
+                <p data-lang-key="about.description">CCT 是一种基于高强度加密逻辑构建的实用型代币。正如其 Logo 所示，核心的钻石象征着不可攻破的数据堡垒，周围的电路则代表了其在自动化智能合约中的流转效率。CCT 旨在为隐私计算、资产确权及链上安全审计提供底层驱动力。</p>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon">🔒</div>
+                        <h3 data-lang-key="about.card1.title">Privacy Computing</h3>
+                        <p data-lang-key="about.card1.description">Empowering confidential transactions and data processing without revealing sensitive information on-chain.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">✅</div>
+                        <h3 data-lang-key="about.card2.title">Asset Verification</h3>
+                        <p data-lang-key="about.card2.description">Enabling robust and immutable proof of asset ownership and authenticity across the blockchain network.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon"> audits</div>
+                        <h3 data-lang-key="about.card3.title">Security Audits</h3>
+                        <p data-lang-key="about.card3.description">Driving transparent and secure on-chain security audits, ensuring integrity and resilience of smart contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tokenomics" class="glow-border">
+            <div class="container">
+                <h2 data-lang-key="tokenomics.title">CCT Tokenomics</h2>
+                <div class="tokenomics-grid">
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.total_supply">Total Supply</h3>
+                        <p><strong data-value="1000000000">1,000,000,000 CCT</strong></p>
+                    </div>
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.symbol">Token Symbol</h3>
+                        <p><strong>CCT</strong></p>
+                    </div>
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.name">Token Name</h3>
+                        <p><strong>CryptoCastle Token</strong></p>
+                    </div>
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.chain">Blockchain</h3>
+                        <p><strong>BSC (Binance Smart Chain)</strong></p>
+                    </div>
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.buy_tax">Buy Tax</h3>
+                        <p><strong>0%</strong></p>
+                    </div>
+                    <div class="token-info-card">
+                        <h3 data-lang-key="tokenomics.sell_tax">Sell Tax</h3>
+                        <p><strong>0%</strong></p>
+                    </div>
+                    <div class="token-info-card" style="grid-column: 1 / -1;">
+                        <h3 data-lang-key="tokenomics.contract_address">Contract Address</h3>
+                        <p class="contract-address" id="contractAddress">0x1234567890abcdef1234567890abcdef12345678</p>
+                        <button class="copy-btn" onclick="copyToClipboard('contractAddress')" data-lang-key="tokenomics.copy">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap">
+            <div class="container">
+                <h2 data-lang-key="roadmap.title">Roadmap</h2>
+                <div class="roadmap-timeline">
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"></div>
+                        <div class="roadmap-item-content">
+                            <span class="date" data-lang-key="roadmap.q4_2023.date">Q4 2023</span>
+                            <h3 data-lang-key="roadmap.q4_2023.title">Phase 1: Foundation & Launch</h3>
+                            <p data-lang-key="roadmap.q4_2023.description">Smart Contract Deployment, Website Launch, Initial Marketing Campaign, Community Building on Telegram & Twitter.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"></div>
+                        <div class="roadmap-item-content">
+                            <span class="date" data-lang-key="roadmap.q1_2024.date">Q1 2024</span>
+                            <h3 data-lang-key="roadmap.q1_2024.title">Phase 2: Growth & Partnerships</h3>
+                            <p data-lang-key="roadmap.q1_2024.description">Major Influencer Marketing, CEX Listing Application, Strategic Partnerships for Privacy Tech Integration, Audits Completion.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"></div>
+                        <div class="roadmap-item-content">
+                            <span class="date" data-lang-key="roadmap.q2_2024.date">Q2 2024</span>
+                            <h3 data-lang-key="roadmap.q2_2024.title">Phase 3: Ecosystem Development</h3>
+                            <p data-lang-key="roadmap.q2_2024.description">Launch of Staking Platform, Development of Privacy-focused DApp, Further Integrations with BSC Ecosystem, SDK for developers.</p>
+                        </div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-point"></div>
+                        <div class="roadmap-item-content">
+                            <span class="date" data-lang-key="roadmap.q3_2024.date">Q3 2024+</span>
+                            <h3 data-lang-key="roadmap.q3_2024.title">Phase 4: Global Expansion & Innovation</h3>
+                            <p data-lang-key="roadmap.q3_2024.description">Cross-chain Interoperability Research, Global Marketing Expansion, AI-enhanced Security Features, Decentralized Governance Implementation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-links">
+            <div class="container">
+                <h2 data-lang-key="social.title">Join Our Community</h2>
+                <div class="social-icons">
+                    <a href="https://t.me/CryptoCastleOfficial" target="_blank" class="social-icon telegram" aria-label="Telegram"></a>
+                    <a href="https://twitter.com/CryptoCastleHQ" target="_blank" class="social-icon twitter" aria-label="Twitter"></a>
+                    <a href="#" target="_blank" class="social-icon website" aria-label="Official Website"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang-key="footer.copyright">&copy; 2024 CryptoCastle. All rights reserved.</p>
+            <p data-lang-key="footer.disclaimer">Disclaimer: Cryptocurrency investments are subject to high market risk. Please do your own research.</p>
+        </div>
+    </footer>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // Language Data
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.tokenomics': 'Tokenomics',
+                'nav.roadmap': 'Roadmap',
+                'nav.social': 'Social',
+                'hero.title': 'Unleash the Power of Privacy with CryptoCastle Token (CCT)',
+                'hero.subtitle': 'Your Gateway to Secure & Efficient Web3 Interactions on BSC.',
+                'hero.buy_now': 'Buy CCT Now',
+                'hero.whitepaper': 'Whitepaper',
+                'about.title': 'About CryptoCastle Token',
+                'about.description': 'CCT is a utility token built on high-strength encryption logic. As its logo suggests, the core diamond symbolizes an impenetrable data fortress, while the surrounding circuitry represents its efficiency in automated smart contracts. CCT aims to provide underlying power for privacy computing, asset verification, and on-chain security audits.',
+                'about.card1.title': 'Privacy Computing',
+                'about.card1.description': 'Empowering confidential transactions and data processing without revealing sensitive information on-chain.',
+                'about.card2.title': 'Asset Verification',
+                'about.card2.description': 'Enabling robust and immutable proof of asset ownership and authenticity across the blockchain network.',
+                'about.card3.title': 'Security Audits',
+                'about.card3.description': 'Driving transparent and secure on-chain security audits, ensuring integrity and resilience of smart contracts.',
+                'tokenomics.title': 'CCT Tokenomics',
+                'tokenomics.total_supply': 'Total Supply',
+                'tokenomics.symbol': 'Token Symbol',
+                'tokenomics.name': 'Token Name',
+                'tokenomics.chain': 'Blockchain',
+                'tokenomics.buy_tax': 'Buy Tax',
+                'tokenomics.sell_tax': 'Sell Tax',
+                'tokenomics.contract_address': 'Contract Address',
+                'tokenomics.copy': 'Copy',
+                'roadmap.title': 'Roadmap',
+                'roadmap.q4_2023.date': 'Q4 2023',
+                'roadmap.q4_2023.title': 'Phase 1: Foundation & Launch',
+                'roadmap.q4_2023.description': 'Smart Contract Deployment, Website Launch, Initial Marketing Campaign, Community Building on Telegram & Twitter.',
+                'roadmap.q1_2024.date': 'Q1 2024',
+                'roadmap.q1_2024.title': 'Phase 2: Growth & Partnerships',
+                'roadmap.q1_2024.description': 'Major Influencer Marketing, CEX Listing Application, Strategic Partnerships for Privacy Tech Integration, Audits Completion.',
+                'roadmap.q2_2024.date': 'Q2 2024',
+                'roadmap.q2_2024.title': 'Phase 3: Ecosystem Development',
+                'roadmap.q2_2024.description': 'Launch of Staking Platform, Development of Privacy-focused DApp, Further Integrations with BSC Ecosystem, SDK for developers.',
+                'roadmap.q3_2024.date': 'Q3 2024+',
+                'roadmap.q3_2024.title': 'Phase 4: Global Expansion & Innovation',
+                'roadmap.q3_2024.description': 'Cross-chain Interoperability Research, Global Marketing Expansion, AI-enhanced Security Features, Decentralized Governance Implementation.',
+                'social.title': 'Join Our Community',
+                'footer.copyright': '&copy; 2024 CryptoCastle. All rights reserved.',
+                'footer.disclaimer': 'Disclaimer: Cryptocurrency investments are subject to high market risk. Please do your own research.',
+            },
+            'zh-tw': {
+                'nav.home': '首頁',
+                'nav.about': '關於',
+                'nav.tokenomics': '代幣經濟',
+                'nav.roadmap': '路線圖',
+                'nav.social': '社交',
+                'hero.title': '使用 CryptoCastle Token (CCT) 釋放隱私的力量',
+                'hero.subtitle': '您在 BSC 上安全高效 Web3 互動的門戶。',
+                'hero.buy_now': '立即購買 CCT',
+                'hero.whitepaper': '白皮書',
+                'about.title': '關於 CryptoCastle Token',
+                'about.description': 'CCT 是一種基於高強度加密邏輯構建的實用型代幣。正如其 Logo 所示，核心的鑽石象徵著不可攻破的數據堡壘，周圍的電路則代表了其在自動化智能合約中的流轉效率。CCT 旨在為隱私計算、資產確權及鏈上安全審計提供底層驅動力。',
+                'about.card1.title': '隱私計算',
+                'about.card1.description': '在不透露敏感資訊的情況下，實現機密交易和數據處理。',
+                'about.card2.title': '資產確權',
+                'about.card2.description': '在區塊鏈網絡上實現強大且不可變的資產所有權和真實性證明。',
+                'about.card3.title': '安全審計',
+                'about.card3.description': '推動透明且安全的鏈上安全審計，確保智能合約的完整性和彈性。',
+                'tokenomics.title': 'CCT 代幣經濟',
+                'tokenomics.total_supply': '總供應量',
+                'tokenomics.symbol': '代幣符號',
+                'tokenomics.name': '代幣名稱',
+                'tokenomics.chain': '區塊鏈',
+                'tokenomics.buy_tax': '買入稅',
+                'tokenomics.sell_tax': '賣出稅',
+                'tokenomics.contract_address': '合約地址',
+                'tokenomics.copy': '複製',
+                'roadmap.title': '路線圖',
+                'roadmap.q4_2023.date': '2023 年第四季',
+                'roadmap.q4_2023.title': '階段 1：基礎與啟動',
+                'roadmap.q4_2023.description': '智能合約部署、網站上線、初步行銷活動、Telegram 和 Twitter 社群建設。',
+                'roadmap.q1_2024.date': '2024 年第一季',
+                'roadmap.q1_2024.title': '階段 2：成長與合作',
+                'roadmap.q1_2024.description': '主要影響者行銷、CEX 上市申請、隱私技術整合的戰略合作夥伴、審計完成。',
+                'roadmap.q2_2024.date': '2024 年第二季',
+                'roadmap.q2_2024.title': '階段 3：生態系統發展',
+                'roadmap.q2_2024.description': '啟動質押平台、開發注重隱私的 DApp、與 BSC 生態系統進一步整合、為開發者提供 SDK。',
+                'roadmap.q3_2024.date': '2024 年第三季起',
+                'roadmap.q3_2024.title': '階段 4：全球擴張與創新',
+                'roadmap.q3_2024.description': '跨鏈互操作性研究、全球行銷擴張、AI 增強安全功能、去中心化治理實施。',
+                'social.title': '加入我們的社區',
+                'footer.copyright': '&copy; 2024 CryptoCastle. 版權所有。',
+                'footer.disclaimer': '免責聲明：加密貨幣投資存在高市場風險。請務必自行研究。',
+            },
+            'ja': {
+                'nav.home': 'ホーム',
+                'nav.about': 'について',
+                'nav.tokenomics': 'トークノミクス',
+                'nav.roadmap': 'ロードマップ',
+                'nav.social': 'ソーシャル',
+                'hero.title': 'CryptoCastleトークン (CCT) でプライバシーの力を解き放つ',
+                'hero.subtitle': 'BSC上での安全で効率的なWeb3インタラクションへのゲートウェイ。',
+                'hero.buy_now': '今すぐCCTを購入',
+                'hero.whitepaper': 'ホワイトペーパー',
+                'about.title': 'CryptoCastleトークンについて',
+                'about.description': 'CCTは、高強度暗号ロジックに基づいて構築されたユーティリティトークンです。ロゴが示すように、中央のダイヤモンドは破られざるデータ要塞を象徴し、周囲の回路は自動化されたスマートコントラクトにおける効率性を表しています。CCTは、プライバシー計算、資産検証、オンチェーンセキュリティ監査のための基盤となる力を提供することを目指しています。',
+                'about.card1.title': 'プライバシー計算',
+                'about.card1.description': '機密情報をオンチェーンで公開することなく、機密取引とデータ処理を強化します。',
+                'about.card2.title': '資産検証',
+                'about.card2.description': 'ブロックチェーンネットワーク全体で、資産の所有権と信頼性の堅牢で不変な証明を可能にします。',
+                'about.card3.title': 'セキュリティ監査',
+                'about.card3.description': '透明で安全なオンチェーンセキュリティ監査を推進し、スマートコントラクトの整合性と回復力を確保します。',
+                'tokenomics.title': 'CCTトークノミクス',
+                'tokenomics.total_supply': '総供給量',
+                'tokenomics.symbol': 'トークンシンボル',
+                'tokenomics.name': 'トークン名',
+                'tokenomics.chain': 'ブロックチェーン',
+                'tokenomics.buy_tax': '購入税',
+                'tokenomics.sell_tax': '売却税',
+                'tokenomics.contract_address': 'コントラクトアドレス',
+                'tokenomics.copy': 'コピー',
+                'roadmap.title': 'ロードマップ',
+                'roadmap.q4_2023.date': '2023年第4四半期',
+                'roadmap.q4_2023.title': 'フェーズ1：基盤とローンチ',
+                'roadmap.q4_2023.description': 'スマートコントラクト展開、ウェブサイトローンチ、初期マーケティングキャンペーン、TelegramとTwitterでのコミュニティ構築。',
+                'roadmap.q1_2024.date': '2024年第1四半期',
+                'roadmap.q1_2024.title': 'フェーズ2：成長とパートナーシップ',
+                'roadmap.q1_2024.description': '主要インフルエンサーマーケティング、CEX上場申請、プライバシー技術統合のための戦略的パートナーシップ、監査完了。',
+                'roadmap.q2_2024.date': '2024年第2四半期',
+                'roadmap.q2_2024.title': 'フェーズ3：エコシステム開発',
+                'roadmap.q2_2024.description': 'ステーキングプラットフォームのローンチ、プライバシー重視のDAppの開発、BSCエコシステムとのさらなる統合、開発者向けSDK。',
+                'roadmap.q3_2024.date': '2024年第3四半期以降',
+                'roadmap.q3_2024.title': 'フェーズ4：グローバル展開とイノベーション',
+                'roadmap.q3_2024.description': 'クロスチェーン相互運用性研究、グローバルマーケティング展開、AI強化セキュリティ機能、分散型ガバナンス実装。',
+                'social.title': 'コミュニティに参加する',
+                'footer.copyright': '&copy; 2024 CryptoCastle. 全著作権所有。',
+                'footer.disclaimer': '免責事項：暗号通貨投資には高い市場リスクが伴います。ご自身で調査を行ってください。',
+            }
+        };
+
+        let currentLanguage = 'en'; // Default language
+
+        // Function to apply translations
+        function applyTranslations() {
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.innerHTML = translations[currentLanguage][key];
+                }
+            });
+
+            // Update specific elements if needed
+            document.getElementById('currentLang').textContent = currentLanguage.toUpperCase();
+            document.documentElement.lang = currentLanguage; // Update html lang attribute
+        }
+
+        // Language Switcher Toggle
+        const langSwitcher = document.getElementById('langSwitcher');
+        const langDropdown = document.getElementById('langDropdown');
+
+        langSwitcher.addEventListener('click', (event) => {
+            langDropdown.classList.toggle('active');
+            langSwitcher.classList.toggle('open');
+            langSwitcher.setAttribute('aria-expanded', langDropdown.classList.contains('active'));
+            event.stopPropagation(); // Prevent document click from closing it immediately
+        });
+
+        document.querySelectorAll('.lang-dropdown button').forEach(button => {
+            button.addEventListener('click', () => {
+                currentLanguage = button.getAttribute('data-lang');
+                applyTranslations();
+                langDropdown.classList.remove('active');
+                langSwitcher.classList.remove('open');
+                langSwitcher.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close language dropdown if clicked outside
+        document.addEventListener('click', (event) => {
+            if (!langSwitcher.contains(event.target)) {
+                langDropdown.classList.remove('active');
+                langSwitcher.classList.remove('open');
+                langSwitcher.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Hamburger menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            document.body.classList.toggle('no-scroll'); // Optional: prevent scrolling when menu is open
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Smooth scroll handled by CSS, just close menu
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+
+        // Copy to clipboard function
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const textToCopy = element.textContent || element.innerText;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const button = element.nextElementSibling; // Assuming button is next sibling
+                const originalText = button.innerHTML;
+                button.innerHTML = 'Copied!';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    applyTranslations(); // Re-apply translation to reset 'Copy' text
+                }, 1500);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // Intersection Observer for Roadmap animations
+        const roadmapItems = document.querySelectorAll('.roadmap-item');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.3 // Trigger when 30% of the item is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, observerOptions);
+
+        // Observe each roadmap item
+        roadmapItems.forEach(item => {
+            observer.observe(item);
+        });
+
+        // Initial application of translations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            applyTranslations();
+        });
+    </script>
+</body>
+</html>
